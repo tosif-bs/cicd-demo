@@ -3,7 +3,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: process.env.NAME });
+  var SECRETNAME = `${process.env.NAME} ${process.env.SURNAME}`;
+  res.render('index', { title: SECRETNAME });
 });
 
 module.exports = router;

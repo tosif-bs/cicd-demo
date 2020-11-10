@@ -28,4 +28,4 @@ jobs:
     - run: npm run build --if-present
     - run: cd /var/www/cicd/cicd-project/cicd-demo/cicd-demo
     - run: pm2 delete cicd-app
-    - run: NAME=${{ secrets.NAME }} pm2 start ./bin/www --name cicd-app
+    - run: NAME=${{ secrets.NAME }} SURNAME=${{ secrets.SURNAME }} pm2 start ./bin/www --name cicd-app
